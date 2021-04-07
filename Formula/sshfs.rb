@@ -18,10 +18,6 @@ class Sshfs < Formula
   depends_on "glib"
   depends_on "libfuse"
 
-  on_macos do
-    disable! date: "2021-04-08", because: "requires FUSE"
-  end
-
   def install
     mkdir "build" do
       system "meson", ".."
